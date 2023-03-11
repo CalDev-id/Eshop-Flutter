@@ -27,7 +27,7 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 100),
+                  const SizedBox(height: 70),
                   Center(
                     child: Column(
                       children: [
@@ -42,7 +42,7 @@ class _SignInPageState extends State<SignInPage> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30),
+                  const SizedBox(height: 40),
                   Text("Username",
                       style: GoogleFonts.poppins(
                           fontSize: 15, fontWeight: FontWeight.w500)),
@@ -55,7 +55,7 @@ class _SignInPageState extends State<SignInPage> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: TextField(
                       decoration: InputDecoration(
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.person,
                           size: 24,
                         ),
@@ -80,7 +80,7 @@ class _SignInPageState extends State<SignInPage> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: TextField(
                       decoration: InputDecoration(
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.lock,
                           size: 22,
                         ),
@@ -113,7 +113,15 @@ class _SignInPageState extends State<SignInPage> {
                   ),
                   const SizedBox(height: 10),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        Get.to(() => const MainPage());
+                      });
+                    },
+                    style: ElevatedButton.styleFrom(
+                        primary: mainColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20))),
                     child: SizedBox(
                         width: double.infinity,
                         height: 43,
@@ -122,10 +130,6 @@ class _SignInPageState extends State<SignInPage> {
                                 style: GoogleFonts.poppins(
                                     fontSize: 15,
                                     fontWeight: FontWeight.w500)))),
-                    style: ElevatedButton.styleFrom(
-                        primary: mainColor,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20))),
                   ),
                   const SizedBox(height: 20),
                   Row(
@@ -133,11 +137,11 @@ class _SignInPageState extends State<SignInPage> {
                     children: [
                       // SvgPicture.asset('assets/kiri.svg'),
                       Image.asset('assets/images/kiri.png'),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Text("Or Continue With",
                           style: GoogleFonts.poppins(
                               fontSize: 15, fontWeight: FontWeight.w500)),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Image.asset('assets/images/kanan.png'),
                     ],
                   ),
