@@ -208,6 +208,7 @@ class _HomePageState extends State<HomePage> {
                   child: GridView.builder(
                     shrinkWrap: true,
                     itemCount: mockProduct.length,
+                    physics: const ClampingScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
                       return ProductCard(product: mockProduct[index]);
