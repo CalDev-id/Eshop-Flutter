@@ -13,8 +13,11 @@ class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        margin: const EdgeInsets.only(right: defaultMargin, bottom: 20),
-        padding: EdgeInsets.all(10),
+        margin: const EdgeInsets.only(
+          right: defaultMargin,
+          bottom: 20,
+        ),
+        padding: EdgeInsets.only(top: 10, right: 10, left: 10),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -43,7 +46,7 @@ class _ProductCardState extends State<ProductCard> {
             Text(
               widget.product.name,
               style: const TextStyle(
-                fontSize: 18,
+                fontSize: 17,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -55,11 +58,34 @@ class _ProductCardState extends State<ProductCard> {
                 decimalDigits: 0,
               ).format(widget.product.price),
               style: const TextStyle(
-                fontSize: 12,
+                fontSize: 14,
                 fontWeight: FontWeight.w500,
                 color: Colors.black54,
               ),
             ),
+            const SizedBox(height: 5),
+            Row(
+              children: [
+                Text(widget.product.rate.toString(),
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black54,
+                    )),
+                const SizedBox(width: 3),
+                const Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 15,
+                ),
+                const SizedBox(width: 5),
+                Text(widget.product.sale.toString() + ' Sold',
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: Colors.black54,
+                    )),
+              ],
+            )
           ],
         ));
   }

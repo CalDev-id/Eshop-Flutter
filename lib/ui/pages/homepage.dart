@@ -30,8 +30,8 @@ class _HomePageState extends State<HomePage> {
                   child: Row(children: [
                     const SizedBox(
                       width: 250,
-                      height: 50,
                       child: TextField(
+                        textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
                           hintText: "Search",
                           hintStyle: TextStyle(color: Colors.black45),
@@ -215,10 +215,10 @@ class _HomePageState extends State<HomePage> {
                     },
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2, childAspectRatio: 1 / 1.3),
+                            crossAxisCount: 2, childAspectRatio: 1 / 1.2),
                   ),
                 ),
-                const SizedBox(height: 200),
+                const SizedBox(height: 50),
               ]),
             ),
           ],
