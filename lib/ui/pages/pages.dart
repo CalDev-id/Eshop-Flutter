@@ -15,3 +15,4 @@ import '../widgets/widget.dart';
 part 'signinpage.dart';
 part 'homepage.dart';
 part 'main_pages.dart';
+part 'detail_product.dart';

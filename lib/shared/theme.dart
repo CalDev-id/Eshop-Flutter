@@ -7,5 +7,6 @@ Color secondaryColor = '76DCDD'.toColor();
 Color yellow = 'FFC700'.toColor();
 Color banner = 'EEEEEE'.toColor();
 Color category = '7B7B7B'.toColor();
+Color detail = 'E9EEFA'.toColor();
 
 TextStyle greyFontStyle = GoogleFonts.poppins(color: greyColor);

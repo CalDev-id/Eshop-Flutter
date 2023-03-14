@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
                   child: Row(children: [
                     const SizedBox(
                       width: 250,
+                      height: 45,
                       child: TextField(
                         textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
@@ -211,7 +212,19 @@ class _HomePageState extends State<HomePage> {
                     physics: const ClampingScrollPhysics(),
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
-                      return ProductCard(product: mockProduct[index]);
+                      return GestureDetector(
+                          onTap: () {
+                            Get.to(() => DetailProduct(
+                                  product: mockProduct[index],
+                                ));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => DetailProduct(
+                            //               product: mockProduct[index],
+                            //             )));
+                          },
+                          child: ProductCard(product: mockProduct[index]));
                     },
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
