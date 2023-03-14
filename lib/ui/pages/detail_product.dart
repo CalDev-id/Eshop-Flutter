@@ -54,7 +54,7 @@ class _DetailProductState extends State<DetailProduct> {
                     icon: const Icon(
                       Icons.arrow_back,
                       size: 30,
-                      color: Colors.lightBlue,
+                      color: Colors.blue,
                     ),
                   ),
                 ),
