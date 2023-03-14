@@ -30,11 +30,12 @@ class _DetailProductState extends State<DetailProduct> {
                       bottomRight: Radius.circular(30),
                     ),
                   ),
-                  child: Image.asset(
-                    widget.product.image,
-                    fit: BoxFit.cover,
-                    width: size.width * .30,
-                    height: size.height * .30,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Image.asset(
+                      widget.product.image,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
