@@ -35,13 +35,13 @@ class Product extends Equatable {
 List<Product> mockProduct = [
   const Product(
       id: 1,
-      name: "Adudus Shoes",
+      name: "Sepatu bang Mesi",
       description:
           'Getting ready  for a facation to Tokyo? a beautifull town in japan whose main vehicle is a boat and travels by boat!! there is no way there.',
-      image: 'assets/images/adudu.png',
+      image: 'assets/images/adudu2.png',
       price: 250000,
-      rate: 4.8,
-      sale: 900),
+      rate: 4.2,
+      sale: 100),
   const Product(
       id: 2,
       name: "NVIDIA RTX 3060",
@@ -49,8 +49,8 @@ List<Product> mockProduct = [
           'Getting ready  for a facation to Tokyo? a beautifull town in japan whose main vehicle is a boat and travels by boat!! there is no way there.',
       image: 'assets/images/rtx.png',
       price: 1200000,
-      rate: 4.8,
-      sale: 900),
+      rate: 1.0,
+      sale: 200),
   const Product(
       id: 3,
       name: "Cool Stuff",
@@ -58,15 +58,15 @@ List<Product> mockProduct = [
           'Getting ready  for a facation to Tokyo? a beautifull town in japan whose main vehicle is a boat and travels by boat!! there is no way there.',
       image: 'assets/images/giga.png',
       price: 500000,
-      rate: 4.8,
-      sale: 900),
+      rate: 4.3,
+      sale: 700),
   const Product(
       id: 4,
-      name: "Giga Chad Man",
+      name: "Idol Kpop",
       description:
           'Getting ready  for a facation to Tokyo? a beautifull town in japan whose main vehicle is a boat and travels by boat!! there is no way there.',
-      image: 'assets/images/cool.png',
+      image: 'assets/images/cewe.png',
       price: 800000,
-      rate: 4.8,
+      rate: 5.0,
       sale: 900),
 ];
