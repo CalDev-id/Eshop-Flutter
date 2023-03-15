@@ -18,3 +18,5 @@ part 'signinpage.dart';
 part 'homepage.dart';
 part 'main_pages.dart';
 part 'detail_product.dart';
+part 'general_page.dart';
+part 'history_page.dart';

@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
           },
           children: const [
             HomePage(),
-            Center(child: Text('History Page')),
+            HistoryPage(),
             Center(child: Text('Cart Page')),
             Center(child: Text('Profile Page')),
           ],

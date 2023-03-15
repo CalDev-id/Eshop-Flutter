@@ -20,7 +20,7 @@ class _CustomSizeState extends State<CustomSize> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
+      height: 35,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: widget.size.length,
@@ -33,8 +33,7 @@ class _CustomSizeState extends State<CustomSize> {
                     });
                   },
                   child: Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: index == widget.selectedSize
