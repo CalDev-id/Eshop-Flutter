@@ -236,12 +236,12 @@ class _DetailProductState extends State<DetailProduct> {
                     ),
 
                     Container(
-                        width: 270,
-                        height: 45,
+                        width: 260,
+                        height: 43,
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                                 colors: [mainColor, secondaryColor]),
-                            borderRadius: BorderRadius.circular(25),
+                            borderRadius: BorderRadius.circular(20),
                             boxShadow: [
                               BoxShadow(
                                 offset: Offset(10, 10),
@@ -249,13 +249,20 @@ class _DetailProductState extends State<DetailProduct> {
                                 color: Colors.black.withOpacity(.15),
                               )
                             ]),
-                        child: ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.transparent,
-                                elevation: 0,
-                                shadowColor: Colors.transparent),
-                            child: Text("Checkout")))
+                        child: Material(
+                          color: Colors.transparent,
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(20),
+                            onTap: () {},
+                            child: Center(
+                              child: Text("Add to Cart",
+                                  style: GoogleFonts.poppins(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.white)),
+                            ),
+                          ),
+                        )),
                     // ElevatedButton(
                     //     style: ElevatedButton.styleFrom(
                     //       primary: mainColor,

@@ -42,7 +42,7 @@ class _SignInPageState extends State<SignInPage> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  const SizedBox(height: 50),
                   Text("Username",
                       style: GoogleFonts.poppins(
                           fontSize: 15, fontWeight: FontWeight.w500)),
@@ -104,34 +104,66 @@ class _SignInPageState extends State<SignInPage> {
                           value: status,
                           onChanged: (value) {
                             setState(() {
-                              status = !status;
+                              status = value;
                             });
                           },
                         ),
                       )
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        Get.to(() => const MainPage());
-                      });
-                    },
-                    style: ElevatedButton.styleFrom(
-                        primary: mainColor,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20))),
-                    child: SizedBox(
-                        width: double.infinity,
-                        height: 43,
-                        child: Center(
+                  const SizedBox(height: 20),
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     setState(() {
+                  //       Get.to(() => const MainPage());
+                  //     });
+                  //   },
+                  //   style: ElevatedButton.styleFrom(
+                  //       primary: mainColor,
+                  //       shape: RoundedRectangleBorder(
+                  //           borderRadius: BorderRadius.circular(20))),
+                  //   child: SizedBox(
+                  //       width: double.infinity,
+                  //       height: 43,
+                  //       child: Center(
+                  //           child: Text("Sign In",
+                  //               style: GoogleFonts.poppins(
+                  //                   fontSize: 15,
+                  //                   fontWeight: FontWeight.w500)))),
+                  // ),
+                  Container(
+                      width: double.infinity,
+                      height: 43,
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [mainColor, secondaryColor]),
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              offset: Offset(10, 10),
+                              blurRadius: 30,
+                              color: Colors.black.withOpacity(.15),
+                            )
+                          ]),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(20),
+                          onTap: () {
+                            setState(() {
+                              Get.to(() => const MainPage());
+                            });
+                          },
+                          child: Center(
                             child: Text("Sign In",
                                 style: GoogleFonts.poppins(
                                     fontSize: 15,
-                                    fontWeight: FontWeight.w500)))),
-                  ),
-                  const SizedBox(height: 20),
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white)),
+                          ),
+                        ),
+                      )),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -145,7 +177,7 @@ class _SignInPageState extends State<SignInPage> {
                       Image.asset('assets/images/kanan.png'),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -181,7 +213,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   Center(
                     child: Text(
                       'By connecting your account confirm that',

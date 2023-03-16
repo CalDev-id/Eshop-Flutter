@@ -57,9 +57,6 @@ class _GeneralPageState extends State<GeneralPage> {
               ),
             ],
           ),
-          const SizedBox(
-            height: 20,
-          ),
           widget.child,
         ],
       ),
