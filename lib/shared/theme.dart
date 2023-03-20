@@ -8,5 +8,6 @@ Color yellow = 'FFC700'.toColor();
 Color banner = 'EEEEEE'.toColor();
 Color category = '7B7B7B'.toColor();
 Color detail = 'E9EEFA'.toColor();
+Color redRemove = 'B35250'.toColor();
 
 TextStyle greyFontStyle = GoogleFonts.poppins(color: greyColor);

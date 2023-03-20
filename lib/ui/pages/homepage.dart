@@ -8,6 +8,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final List<String> images = [
+    'assets/images/banner.png',
+    'assets/images/banner.png',
+    'assets/images/banner.png',
+    'assets/images/banner.png',
+    'assets/images/banner.png',
+  ];
+
   int selectedIndex = 0;
 
   @override
@@ -49,9 +57,25 @@ class _HomePageState extends State<HomePage> {
                     SvgPicture.asset('assets/nav2.svg', width: 39),
                   ]),
                 ),
-                Image.asset(
-                  'assets/images/banner.png',
-                ),
+                // Image.asset(
+                //   'assets/images/banner.png',
+                // ),
+                Container(
+                    child: CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    viewportFraction: 1,
+                    aspectRatio: 2 / 1,
+                    enlargeCenterPage: true,
+                    autoPlayAnimationDuration: Duration(seconds: 2),
+                  ),
+                  items: images
+                      .map((item) => Container(
+                            child: Center(
+                                child: Image.asset(item, fit: BoxFit.cover)),
+                          ))
+                      .toList(),
+                )),
                 Container(
                   color: Colors.white,
                   padding: const EdgeInsets.only(

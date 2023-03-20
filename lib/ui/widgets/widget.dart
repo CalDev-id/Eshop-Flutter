@@ -13,3 +13,4 @@ part 'product_card.dart';
 part 'rating.dart';
 part 'custom_size.dart';
 part 'custom_history.dart';
+part 'custom_cart.dart';

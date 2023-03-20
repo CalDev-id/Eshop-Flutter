@@ -50,7 +50,7 @@ class CustomBottomNavbar extends StatelessWidget {
                 }
               },
               icon: const Icon(
-                Icons.sell,
+                Icons.shopping_cart,
                 size: 25,
               ),
               color: Colors.white,
