@@ -23,3 +23,5 @@ part 'detail_product.dart';
 part 'general_page.dart';
 part 'history_page.dart';
 part 'cart_page.dart';
+part 'profile_page.dart';
+part 'notification_page.dart';

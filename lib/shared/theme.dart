@@ -9,5 +9,7 @@ Color banner = 'EEEEEE'.toColor();
 Color category = '7B7B7B'.toColor();
 Color detail = 'E9EEFA'.toColor();
 Color redRemove = 'B35250'.toColor();
+Color greyProfile = 'FCFBFC'.toColor();
+Color pinkNotif = 'F4E2E2'.toColor();
 
 TextStyle greyFontStyle = GoogleFonts.poppins(color: greyColor);

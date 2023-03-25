@@ -54,7 +54,15 @@ class _HomePageState extends State<HomePage> {
                     const Spacer(),
                     SvgPicture.asset('assets/nav1.svg', width: 38),
                     const Spacer(),
-                    SvgPicture.asset('assets/nav2.svg', width: 39),
+                    GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const NotificationPage()));
+                        },
+                        child: SvgPicture.asset('assets/nav2.svg', width: 39)),
                   ]),
                 ),
                 // Image.asset(

@@ -26,7 +26,7 @@ class _MainPageState extends State<MainPage> {
             HomePage(),
             HistoryPage(),
             CartPage(),
-            Center(child: Text('Profile Page')),
+            ProfilePage(),
           ],
         ),
         Align(
