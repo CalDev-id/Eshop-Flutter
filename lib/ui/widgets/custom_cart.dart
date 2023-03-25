@@ -10,6 +10,20 @@ class CustomCart extends StatefulWidget {
 }
 
 class _CustomCartState extends State<CustomCart> {
+  TextEditingController cityController = TextEditingController();
+
+  final List<String> items = [
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+  ];
+  String? selectedValue;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -17,7 +31,6 @@ class _CustomCartState extends State<CustomCart> {
       children: [
         Container(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 margin: const EdgeInsets.all(10),
@@ -33,6 +46,7 @@ class _CustomCartState extends State<CustomCart> {
                   fit: BoxFit.cover,
                 ),
               ),
+              SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,7 +66,18 @@ class _CustomCartState extends State<CustomCart> {
                     ),
                   ),
                 ],
-              )
+              ),
+              Spacer(),
+              CustomDropdownButton2(
+                hint: '1',
+                dropdownItems: items,
+                value: selectedValue,
+                onChanged: (value) {
+                  setState(() {
+                    selectedValue = value;
+                  });
+                },
+              ),
             ],
           ),
         ),

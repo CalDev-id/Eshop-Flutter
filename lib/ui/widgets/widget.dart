@@ -7,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:supercharged/supercharged.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 
 part 'custom_bottom_navbar.dart';
 part 'product_card.dart';
@@ -14,3 +15,4 @@ part 'rating.dart';
 part 'custom_size.dart';
 part 'custom_history.dart';
 part 'custom_cart.dart';
+part 'custom_dropdown.dart';
